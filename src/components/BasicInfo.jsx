@@ -1,12 +1,12 @@
 function BasicInfo({data, onEdit}) {
   return(
-    <section>
+    <section className="section">
       <h2>Basic Info</h2>
-      <label>Name: {data.name}</label>
-      <label>Address: {data.address}</label>
-      <label>Phone: {data.phone}</label>
-      <label>Email: {data.email}</label>
-      <button onClick={onEdit}></button>
+      <p><strong>Name:</strong> {data.name}</p>
+      <p><strong>Address:</strong> {data.address}</p>
+      <p><strong>Phone:</strong> {data.phone}</p>
+      <p><strong>Email:</strong> {data.email}</p>
+      <button onClick={onEdit}>Edit</button>
     </section>
   );
 }

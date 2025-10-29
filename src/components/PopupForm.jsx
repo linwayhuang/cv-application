@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function PopupForm({data, onSave, onClose}) {
+function PopupForm({data, onSave, onCancel}) {
     const [info, setInfo] = useState(data);
     
     function handleChange(e) {
@@ -14,24 +14,29 @@ function PopupForm({data, onSave, onClose}) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label>
+            <label htmlFor="name">
                 Name:
-                <input type="text" name="name" value={info.name} onChange={handleChange} />
             </label>
-            <label>
+                <input type="text" id="name" name="name" value={info.name} onChange={handleChange} />
+            <br></br>
+            <label htmlFor="address">
                 Address:
-                <input type="text" name="address" value={info.address} onChange={handleChange} />
             </label>
-            <label>
+                <input type="text" id="address" name="address" value={info.address} onChange={handleChange} />
+            <br></br>
+            <label htmlFor="phone">
                 Phone:
-                <input type="text" name="phone" value={info.phone} onChange={handleChange} />
             </label>
-            <label>
+                <input type="text" id="phone" name="phone" value={info.phone} onChange={handleChange} />
+            <br></br>
+            <label htmlFor="email">
                 Email:
-                <input type="email" name="email" value={info.email} onChange={handleChange} />
             </label>
+                <input type="email" id="email" name="email" value={info.email} onChange={handleChange} />
+            <br></br>
             <button type="submit">Save</button>
-            <button type="button" onClick={onClose}>Close</button>
+            <br></br>
+            <button type="button" onClick={onCancel}>Cancel</button>
         </form>
     )
 }

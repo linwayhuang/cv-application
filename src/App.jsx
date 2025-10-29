@@ -24,13 +24,10 @@ function App() {
   }
 
   return (
-    <div>
-      <p>Hello</p>
       <div>
         <BasicInfo data={basicInfo} onEdit={handleEdit}/>
-        {showPopup && (<PopupForm data={basicInfo} onSave={handleSave} onClose={() => setShowPopup(false)}/>)}
+        {showPopup && (<PopupForm data={basicInfo} onSave={handleSave} onCancel={() => setShowPopup(false)}/>)}
       </div>
-    </div>
   )
 }
 
