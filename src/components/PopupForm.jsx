@@ -65,6 +65,18 @@ function PopupForm({ section, data, onSave, onCancel}) {
                         <br></br>
                     </section>
                 }
+                {section === "experience" && (
+                    <section>
+                        <label htmlFor="company">Company:</label>
+                            <input type="text" id="company" name="company" value={info.company} onChange={handleChange} />
+                        <label htmlFor="title">Title:</label>
+                            <input type="text" id="title" name="title" value={info.title} onChange={handleChange} />
+                        <label htmlFor="from">From:</label>
+                            <input type="text" id="from" name="from" value={info.from} onChange={handleChange} />
+                        <label htmlFor="to">To:</label>
+                            <input type="text" id="to" name="to" value={info.to} onChange={handleChange} />
+                    </section>
+)}
                 <div className="popup-buttons">
                     <button type="submit">Save</button>
                     <button type="button" onClick={onCancel}>Cancel</button>
